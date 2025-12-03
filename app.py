@@ -71,6 +71,7 @@ def tool_wiki(query):
 device = "cuda" if torch.cuda.is_available() else "cpu"
 LLAMA = "meta-llama/Llama-3.2-1B-Instruct"
 
+
 quantization_config = BitsAndBytesConfig(
     load_in_4bit=True,
     bnb_4bit_use_double_quant=True,
@@ -79,10 +80,12 @@ quantization_config = BitsAndBytesConfig(
 )
 
 model = AutoModelForCausalLM.from_pretrained(
-    LLAMA,
+    "meta-llama/Llama-3.2-1B-Instruct",
+    quantization_config=quantization_config,
     device_map="auto",
-    quantization_config=quantization_config
+    llm_int8_enable_fp32_cpu_offload=True
 )
+
 
 tokenizer = AutoTokenizer.from_pretrained(LLAMA)
 tokenizer.pad_token = tokenizer.eos_token
