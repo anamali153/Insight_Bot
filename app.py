@@ -81,10 +81,10 @@ quantization_config = BitsAndBytesConfig(
 
 model = AutoModelForCausalLM.from_pretrained(
     "meta-llama/Llama-3.2-1B-Instruct",
+    device_map="auto",       # automatically splits layers on GPU/CPU
     quantization_config=quantization_config,
-    device_map="auto",
-    llm_int8_enable_fp32_cpu_offload=True
 )
+
 
 
 tokenizer = AutoTokenizer.from_pretrained(LLAMA)
