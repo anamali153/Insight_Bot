@@ -1,9 +1,0 @@
-gradio>=5.50
-torch>=2.1
-transformers>=4.35
-bitsandbytes>=0.41.1
-accelerate>=0.22.0
-optimum>=2.5.0
-huggingface-hub>=0.36.0
-python-dotenv>=1.0.0
-wikipedia>=1.4.0
