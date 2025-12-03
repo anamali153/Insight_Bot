@@ -87,11 +87,11 @@ def tool_wiki(query):
 
 #!pip install wikipedia
 
-#load_dotenv()  # if you store token in .env
-#login(token=os.getenv("HF_TOKEN"))
+load_dotenv()  # if you store token in .env
+login(token=os.getenv("HF_TOKEN"))
 
-#from huggingface_hub import whoami
-#print(whoami())
+from huggingface_hub import whoami
+print(whoami())
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
