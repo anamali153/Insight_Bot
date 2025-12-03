@@ -1,5 +1,7 @@
 gradio==5.50.0
 torch
 transformers
+bitsandbytes
+accelerate
 python-dotenv
 wikipedia
