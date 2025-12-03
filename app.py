@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1-TVC2PKWUNuenFuJVBPMUs6vhkOLZi-s
 """
 
-pip install python-dotenv torch transformers bitsandbytes huggingface_hub accelerate optimum
+#pip install python-dotenv torch transformers bitsandbytes huggingface_hub accelerate optimum
 
 import os
 import torch
