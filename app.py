@@ -85,7 +85,7 @@ def tool_wiki(query):
     except:
         return "No Wikipedia results found."
 
-!pip install wikipedia
+#!pip install wikipedia
 
 #load_dotenv()  # if you store token in .env
 #login(token=os.getenv("HF_TOKEN"))
